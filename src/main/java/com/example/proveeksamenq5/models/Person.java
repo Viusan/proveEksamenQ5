@@ -1,7 +1,10 @@
 package com.example.proveeksamenq5.models;
+import jakarta.validation.constraints.Pattern;
 
 public class Person {
     private int id;
+
+    @Pattern(regexp = "^[A-ZÆØÅ][a-zæøå]+([\\- ][A-ZÆØÅ][a-zæøå]+)*$", message="Username invalid")
     private String name;
 
     public Person(int id, String name){
